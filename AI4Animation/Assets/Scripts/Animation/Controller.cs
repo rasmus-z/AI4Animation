@@ -173,6 +173,7 @@ public class Controller {
 
 	#if UNITY_EDITOR
 	public void Inspector() {
+
 		Utility.SetGUIColor(Color.grey);
 		using(new GUILayout.VerticalScope ("Box")) {
 			Utility.ResetGUIColor();
@@ -226,6 +227,7 @@ public class Controller {
 				}
 			}
 		}
+
 	}
 	#endif
 

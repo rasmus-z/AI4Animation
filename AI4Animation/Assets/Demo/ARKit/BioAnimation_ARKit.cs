@@ -207,7 +207,8 @@ namespace SIGGRAPH_2017 {
 				}
 
 				//Predict
-				float rest = Mathf.Pow(1.0f-Trajectory.Points[RootPointIndex].Styles[0], 0.25f);
+				float tmp = Trajectory.Points[RootPointIndex].Styles.Length == 0 ? 1 : Trajectory.Points[RootPointIndex].Styles[0];
+				float rest = Mathf.Pow(1.0f-tmp, 0.25f);
 				NN.SetDamping(1f - (rest * 0.9f + 0.1f));
 				NN.Predict();
 
@@ -368,6 +369,7 @@ namespace SIGGRAPH_2017 {
 		}
 
 		void OnGUI() {
+/*
 			GUI.color = UltiDraw.Mustard;
 			GUI.backgroundColor = UltiDraw.Black;
 			float height = 0.05f;
@@ -381,6 +383,7 @@ namespace SIGGRAPH_2017 {
 				GUI.Label(Utility.GetGUIRect(0.075f, 0.075f + i*0.05f, 0.05f, height), keys);
 				GUI.HorizontalSlider(Utility.GetGUIRect(0.125f, 0.075f + i*0.05f, 0.15f, height), Trajectory.Points[RootPointIndex].Styles[i], 0f, 1f);
 			}
+*/
 		}
 
 		void OnRenderObject() {
@@ -470,4 +473,5 @@ namespace SIGGRAPH_2017 {
 			}
 	}
 	#endif
+
 }
