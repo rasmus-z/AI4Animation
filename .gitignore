@@ -4,6 +4,8 @@ AI4Animation/[Oo]bj/
 AI4Animation/[Bb]uild/
 AI4Animation/[Bb]uilds/
 AI4Animation/Assets/AssetStoreTools*
+AI4Animation/Assets/UnityARKitPlugin/
+AI4Animation/Assets/VRM/
 PATCH/
 
 # Visual Studio 2015 cache directory
@@ -23,6 +25,7 @@ ExportedObj/
 *.booproj
 *.svd
 *.pdb
+*.BAK*
 
 
 # Unity3D generated meta files
