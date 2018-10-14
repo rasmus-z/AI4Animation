@@ -2,7 +2,7 @@
 using System.Runtime.InteropServices;
 
 public static class Eigen {
-#if UNITY_IPHONE
+#if UNITY_IOS
     const string LIBNAME = "__Internal";
 #else
     const string LIBNAME = "Eigen";

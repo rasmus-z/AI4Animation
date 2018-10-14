@@ -24,9 +24,9 @@ PluginImporter:
         Exclude SamsungTV: 0
         Exclude Tizen: 0
         Exclude WebGL: 0
-        Exclude Win: 1
+        Exclude Win: 0
         Exclude Win64: 0
-        Exclude iOS: 1
+        Exclude iOS: 0
   - first:
       Android: Android
     second:
@@ -36,7 +36,7 @@ PluginImporter:
   - first:
       Any: 
     second:
-      enabled: 0
+      enabled: 1
       settings: {}
   - first:
       Editor: Editor
@@ -103,7 +103,7 @@ PluginImporter:
   - first:
       Standalone: Win
     second:
-      enabled: 0
+      enabled: 1
       settings:
         CPU: None
   - first:
@@ -125,7 +125,7 @@ PluginImporter:
   - first:
       iPhone: iOS
     second:
-      enabled: 0
+      enabled: 1
       settings:
         AddToEmbeddedBinaries: false
         CompileFlags: 
