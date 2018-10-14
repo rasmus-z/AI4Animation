@@ -2,7 +2,9 @@
 using System.Runtime.InteropServices;
 
 public static class Eigen {
-#if UNITY_IOS
+#if UNITY_EDITOR
+    const string LIBNAME = "Eigen";
+#elif UNITY_IOS
     const string LIBNAME = "__Internal";
 #else
     const string LIBNAME = "Eigen";

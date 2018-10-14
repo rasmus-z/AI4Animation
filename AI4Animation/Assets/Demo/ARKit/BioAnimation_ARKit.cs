@@ -32,7 +32,7 @@ namespace SIGGRAPH_2017 {
 		private Vector3[] Velocities = new Vector3[0];
 		private Quaternion[] Rotations = new Quaternion[0];
 		private Vector3[] RotationsFrom = new Vector3[0];
-		private Vector3[] Diff = new Vector3[0];
+		//private Vector3[] Diff = new Vector3[0];
 
 		//Trajectory for 60 Hz framerate
 		private const int PointSamples = 12;
@@ -58,8 +58,8 @@ namespace SIGGRAPH_2017 {
 			Rotations = new Quaternion[Actor.Bones.Length];
 			RotationsFrom = new Vector3[Actor.Bones.Length];
 			
-			Actor Skeleton = GameObject.Find("Skeleton").GetComponent<Actor>();
-			Diff = new Vector3[Actor.Bones.Length];
+			//Actor Skeleton = GameObject.Find("Skeleton").GetComponent<Actor>();
+			//Diff = new Vector3[Actor.Bones.Length];
 			
 			Trajectory = new Trajectory(111, Controller.GetNames(), transform.position, TargetDirection);
 			Trajectory.Postprocess();
@@ -79,11 +79,7 @@ namespace SIGGRAPH_2017 {
 					RotationsFrom[i-1] = Actor.Bones[i].Transform.position - Actor.Bones[i-1].Transform.position;
 				}
 
-
-//if(i == 13){
-//Debug.Log(Skeleton.Bones[i].Transform.localPosition.z + " " + Actor.Bones[i].Transform.localPosition.z);
-//}
-				Diff[i] = Skeleton.Bones[i].Transform.localPosition - Actor.Bones[i].Transform.localPosition;
+				//Diff[i] = Skeleton.Bones[i].Transform.localPosition - Actor.Bones[i].Transform.localPosition;
 			}
 
 			if(NN.Parameters == null) {
@@ -286,7 +282,7 @@ namespace SIGGRAPH_2017 {
 					Vector3 position = new Vector3(NN.GetOutput(opos+i*3+0), NN.GetOutput(opos+i*3+1), NN.GetOutput(opos+i*3+2)) / UnitScale;
 					Vector3 velocity = new Vector3(NN.GetOutput(ovel+i*3+0), NN.GetOutput(ovel+i*3+1), NN.GetOutput(ovel+i*3+2)) / UnitScale;
 
-					if(i >= 13 && i <= 16){ position.z -= Diff[13].z; }
+					if(i >= 13 && i <= 16){ position.z -= 0.075f; }
 					if(i == 17){ position.z -= 0.05f; }
 					if((i >= 13 && i <= 19) || (i >= 24 && i <= 26)){ position.y += 0.1f; }
 
