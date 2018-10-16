@@ -282,9 +282,11 @@ namespace SIGGRAPH_2017 {
 					Vector3 position = new Vector3(NN.GetOutput(opos+i*3+0), NN.GetOutput(opos+i*3+1), NN.GetOutput(opos+i*3+2)) / UnitScale;
 					Vector3 velocity = new Vector3(NN.GetOutput(ovel+i*3+0), NN.GetOutput(ovel+i*3+1), NN.GetOutput(ovel+i*3+2)) / UnitScale;
 
-					if(i >= 13 && i <= 16){ position.z -= 0.075f; }
+					//Adjust for VRoid
+					if(i >= 13 && i <= 16){ position.z -= 0.08f; }
 					if(i == 17){ position.z -= 0.05f; }
-					if((i >= 13 && i <= 19) || (i >= 24 && i <= 26)){ position.y += 0.1f; }
+					if(i == 18 || i == 25){ position.z += 0.04f; }
+					//if((i >= 13 && i <= 19) || (i >= 24 && i <= 26)){ position.y += 0.1f; }
 
 					Positions[i] = Vector3.Lerp(Positions[i].GetRelativePositionTo(currentRoot) + velocity, position, 0.5f);
 					Velocities[i] = velocity.GetRelativeDirectionFrom(currentRoot);
@@ -307,7 +309,9 @@ namespace SIGGRAPH_2017 {
 				for(int i=0; i<Actor.Bones.Length; i++) {
 					Actor.Bones[i].Transform.position = Positions[i];
 
+					//Adjust for VRoid
 					if(i == 15 || i == 16 || i == 20 || i == 27){ continue; }
+
 					Actor.Bones[i].Transform.rotation = Rotations[i];
 				}
 			}
@@ -404,7 +408,7 @@ namespace SIGGRAPH_2017 {
 				UltiDraw.DrawLine(Trajectory.Points[RootPointIndex].GetPosition(), Trajectory.Points[RootPointIndex].GetPosition() + TargetVelocity, 0.05f, 0f, UltiDraw.Green.Transparent(0.75f));
 				UltiDraw.End();
 				Trajectory.Draw(10);
-				
+/*
 				UltiDraw.Begin();
 				for(int i=0; i<Actor.Bones.Length; i++) {
 					UltiDraw.DrawArrow(
@@ -417,6 +421,7 @@ namespace SIGGRAPH_2017 {
 					);
 				}
 				UltiDraw.End();
+*/
 			}
 		}
 
