@@ -37,6 +37,13 @@ public class InputHandler : MonoBehaviour {
 			if(Input.GetKey(k)) {
 				state.Add(k);
 			}
+			if(MoveFront){ state.Add(KeyCode.W); }
+			if(MoveBack){ state.Add(KeyCode.S); }
+			if(MoveLeft){ state.Add(KeyCode.A); }
+			if(MoveRight){ state.Add(KeyCode.D); }
+			if(TurnLeft){ state.Add(KeyCode.Q); }
+			if(TurnRight){ state.Add(KeyCode.E); }
+			if(Jog){ state.Add(KeyCode.LeftShift); }
 		}
 		Keys.Add(state);
 	}
@@ -54,4 +61,26 @@ public class InputHandler : MonoBehaviour {
 		}
 	}
 	
+	private bool MoveFront = false;
+	private bool MoveBack = false;
+	private bool MoveLeft = false;
+	private bool MoveRight = false;
+	private bool TurnLeft = false;
+	private bool TurnRight = false;
+	private bool Jog = false;
+
+	public void MoveFrontDown(){ MoveFront = true; }
+	public void MoveFrontUp(){ MoveFront = false; }
+	public void MoveBackDown(){ MoveBack = true; }
+	public void MoveBackUp(){ MoveBack = false; }
+	public void MoveLeftDown(){ MoveLeft = true; }
+	public void MoveLeftUp(){ MoveLeft = false; }
+	public void MoveRightDown(){ MoveRight = true; }
+	public void MoveRightUp(){ MoveRight = false; }
+	public void TurnLeftDown(){ TurnLeft = true; }
+	public void TurnLeftUp(){ TurnLeft = false; }
+	public void TurnRightDown(){ TurnRight = true; }
+	public void TurnRightUp(){ TurnRight = false; }
+	public void JogDown(){ Jog = true; }
+	public void JogUp(){ Jog = false; }
 }
