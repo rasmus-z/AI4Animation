@@ -6,7 +6,7 @@ AI4Animation からフォークしています。詳細は下記を確認して�
 
 https://github.com/sebastianstarke/AI4Animation
 
-##設定など
+## 設定など
 
 - UniVRM を使用しています。下記のリポジトリから unitypackage をダウンロードし、 Unity にインポートしてください。
 
