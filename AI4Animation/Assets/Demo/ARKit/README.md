@@ -2,6 +2,8 @@
 
 ARKit で検出した地形に対して PFNN が自動生成したモーションを VRM ファイルに反映するサンプルです。
 
+|<img src="https://raw.githubusercontent.com/t-takasaka/AI4Animation/master/Media/ARKit/demo1.gif">|<img src="https://raw.githubusercontent.com/t-takasaka/AI4Animation/master/Media/ARKit/demo2.gif">|<img src="https://raw.githubusercontent.com/t-takasaka/AI4Animation/master/Media/ARKit/demo3.gif">|
+
 AI4Animation からフォークしています。詳細は下記を確認してください。
 
 https://github.com/sebastianstarke/AI4Animation
