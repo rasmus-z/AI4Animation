@@ -2,6 +2,10 @@
 
 ARKit で検出した地形に対して PFNN が自動生成したモーションを VRM ファイルに反映するサンプルです。
 
+AI4Animation からフォークしています。詳細は下記を確認してください。
+
+https://github.com/sebastianstarke/AI4Animation
+
 ##設定など
 - UniVRM を使用しています。下記のリポジトリから unitypackage をダウンロードし、 Unity にインポートしてください。
 
