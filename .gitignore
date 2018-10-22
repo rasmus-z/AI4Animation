@@ -4,9 +4,17 @@ AI4Animation/[Oo]bj/
 AI4Animation/[Bb]uild/
 AI4Animation/[Bb]uilds/
 AI4Animation/Assets/AssetStoreTools*
-AI4Animation/Assets/UnityARKitPlugin/
-AI4Animation/Assets/VRM/
+AI4Animation/Assets/UnityARKitPlugin*
+AI4Animation/Assets/..UnityARKitPlugin*
+AI4Animation/Assets/VRM*
+AI4Animation/Assets/6D SDK*
 PATCH/
+
+Media/ARKit/demo.mp4
+Media/ARKit/demo1.mp4
+Media/ARKit/demo2.mp4
+Media/ARKit/demo3.mp4
+Media/ARKit/demo4.mp4
 
 # Visual Studio 2015 cache directory
 AI4Animation/.vscode/

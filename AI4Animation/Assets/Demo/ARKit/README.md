@@ -23,7 +23,7 @@ https://bitbucket.org/Unity-Technologies/unity-arkit-plugin/downloads/?tab=tags
 http://www.starke-consult.de/UoE/GitHub/SIGGRAPH_2017/NN_Original_PFNN.zip
 
 ## 注意事項
-- 学習済みのデータに合わせるため、サンプルではボーンをわざと歪めている部分があります。自前のデータと差し替える際はご注意ください。
+- AIの学習済みデータに合わせるため、サンプルではボーンをわざと歪めている部分があります。自前のデータと差し替える際はご注意ください。
 
 - iOS 用の Eigen ライブラリは bitcode を無効にしています。 Xcode 上で bitcode の設定を合わせるか、またはライブラリを再生成してください。 Plugins ディレクトリ下にライブラリの生成に使用したコマンドファイルを置いてあります。
 
